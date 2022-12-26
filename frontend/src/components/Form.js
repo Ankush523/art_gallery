@@ -1,8 +1,23 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import FileBase from 'react-file-base64'
 const Form = () => {
+  const [postData, setPostData] = useState({
+    creator : '',
+    title: '',
+    message: '',
+    tage: '',
+    selectedFile: ''
+  })
   return (
-    <div>Form</div>
+    <div>
+      <div>
+        <FileBase 
+          type="file"
+          multiple= {false}
+          onDone={({base64}) => setPostData({...postData, selectedFile:base64})}
+        />
+      </div>
+    </div>
   )
 }
 
