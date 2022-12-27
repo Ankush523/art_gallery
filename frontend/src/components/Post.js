@@ -1,6 +1,8 @@
 import React from 'react'
-
-const Post = () => {
+import { useDispatch } from 'react-redux'
+import { deletePost,likePost } from '../actions/posts'
+const Post = ({post, currentId}) => {
+  const dispatch = useDispatch()
   return (
     <div>Post</div>
   )

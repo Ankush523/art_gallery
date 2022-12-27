@@ -5,12 +5,13 @@ import Posts from './components/Posts';
 import Form from './components/Form';
 import { useDispatch } from 'react-redux';
 import {getPosts} from "./actions/posts"
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 function App() {
+  const [currentId,setCurrentId] = useState(null)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPosts())
-  },[dispatch])
+  },[currentId,dispatch])
   return (
     <div className="App flex flex-col">
       <div className='my-[20px]'>
