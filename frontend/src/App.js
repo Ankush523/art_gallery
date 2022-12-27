@@ -17,7 +17,7 @@ function App() {
       <div className='my-[20px]'>
         <Navbar/>
       </div>
-      <div className='flex flex-row justify-between mx-[30px]'>
+      <div className='flex flex-row justify-between mx-[40px]'>
         <div><Posts/></div>
         <div><Form/></div>
       </div>
