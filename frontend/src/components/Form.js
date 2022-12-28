@@ -34,16 +34,16 @@ const Form = ({ currentId, setCurrentId }) => {
     <div className="flex flex-col bg-white rounded-xl shadow-xl px-[20px]">
       <label className="py-[10px]">Create a Memory</label>
       <div className="pb-[15px]">
-        <input placeholder="Creator" className="border border-slate-300 rounded-md w-[332.5px] h-[50px] px-[10px]" onChange={(e) => setPostData({...post, creator:e.target.value})}/>
+        <input placeholder="Creator" className="border border-slate-300 rounded-md w-[332.5px] h-[50px] px-[10px]" onChange={(e) => setPostData({...postData, creator:e.target.value})}/>
       </div>
       <div className="pb-[15px]">
-        <input placeholder="Title" className="border border-slate-300 rounded-md w-[332.5px] h-[50px] px-[10px]" onChange={(e) => setPostData({...post, title:e.target.value})}/>
+        <input placeholder="Title" className="border border-slate-300 rounded-md w-[332.5px] h-[50px] px-[10px]" onChange={(e) => setPostData({...postData, title:e.target.value})}/>
       </div>
       <div className="pb-[15px]">
-        <input placeholder="Message" className="border border-slate-300 rounded-md w-[332.5px] h-[90px] px-[10px]"  onChange={(e) => setPostData({...post, message:e.target.value})}/>
+        <input placeholder="Message" className="border border-slate-300 rounded-md w-[332.5px] h-[90px] px-[10px]"  onChange={(e) => setPostData({...postData, message:e.target.value})}/>
       </div>
       <div className="pb-[15px]">
-        <input placeholder="Tags" className="border border-slate-300 rounded-md w-[332.5px] h-[50px] px-[10px]" onChange={(e) => setPostData({...post, tags:e.target.value.split(',')})}/>
+        <input placeholder="Tags" className="border border-slate-300 rounded-md w-[332.5px] h-[50px] px-[10px]" onChange={(e) => setPostData({...postData, tags:e.target.value.split(',')})}/>
       </div>
       <div className="pb-[15px]">
         <FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })}/>

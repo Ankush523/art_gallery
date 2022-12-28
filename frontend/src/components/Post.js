@@ -9,7 +9,7 @@ const Post = ({post, setCurrentId}) => {
     <div>
       <img src={post.selectedFile || "https://www.planetware.com/wpimages/2020/02/greece-in-pictures-beautfiul-places-to-photograph-santorini-oia.jpg"} alt="greece" className='h-[40px]'/>
       <div>
-        <h1>{post.creator}</h1>
+        <label>{post.creator}</label>
       </div>
 
       <div>
