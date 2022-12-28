@@ -7,9 +7,9 @@ const Post = ({post, setCurrentId}) => {
 
   return (
     <div>
-      <img src={post.selectedFile || "https://www.planetware.com/wpimages/2020/02/greece-in-pictures-beautfiul-places-to-photograph-santorini-oia.jpg"} alt="greece" className='h-[0px] pt-[55%] bg-blend-darken'/>
+      <img src={post.selectedFile || "https://www.planetware.com/wpimages/2020/02/greece-in-pictures-beautfiul-places-to-photograph-santorini-oia.jpg"} alt="greece" className='h-[40px]'/>
       <div>
-        <label>{post.creator}</label>
+        <h1>{post.creator}</h1>
       </div>
 
       <div>

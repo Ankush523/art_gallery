@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import {getPosts} from "./actions/posts"
 import { useEffect, useState } from 'react';
 function App() {
-  const [currentId,setCurrentId] = useState(null)
+  const [currentId,setCurrentId] = useState(0)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPosts())
@@ -18,8 +18,8 @@ function App() {
         <Navbar/>
       </div>
       <div className='flex flex-row justify-between mx-[40px]'>
-        <div><Posts/></div>
-        <div><Form/></div>
+        <div><Posts setCurrentId={setCurrentId}/></div>
+        <div><Form currentId={currentId} setCurrentId={setCurrentId}/></div>
       </div>
     </div>
   );
