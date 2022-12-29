@@ -29,6 +29,7 @@ const Post = ({post, setCurrentId}) => {
       <div>
         <button onClick={() => dispatch(likePost(post._id))}> Like {post.likeCount}</button>
         <button onClick={() => dispatch(deletePost(post._id))}>Delete</button>
+        <label>Hello</label>
       </div>
     </div>
   )
