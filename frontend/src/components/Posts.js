@@ -13,6 +13,7 @@ const Posts = ({ setCurrentId }) => {
             <div key={post._id}>
               <Post post={post} setCurrentId={setCurrentId}/>
             </div>
+            
           ))
         }
       </div>
